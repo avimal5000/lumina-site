@@ -20,6 +20,7 @@
 <ul>
 <li><strong>Account information:</strong> your name, email address and profile picture from Google when you sign in.</li>
 <li><strong>Google Calendar:</strong> the list of your calendars, and event details (title, time, location, attendees, meeting link, your response status) for a rolling window of recent and upcoming events.</li>
+<li><strong>iCloud Calendar (optional):</strong> if you connect it, the list of your iCloud calendars and the same event details for the same window, read over CalDAV with an app-specific password you create for Lumina. Lumina only reads iCloud calendars; it never changes them, and never uses the iCloud contacts or mail that such a password could also reach.</li>
 <li><strong>Gmail:</strong> for messages in your inbox, the sender, subject, date, a short preview and a link back to the message. Full message bodies are read only when Lumina analyzes a message for tasks or meeting requests, and are not kept afterwards.</li>
 <li><strong>Your preferences:</strong> working hours, focus time, quiet hours and similar settings you enter.</li>
 <li><strong>Activity records:</strong> a log of actions Lumina takes for you, such as notifications sent, so you can see what happened.</li>
@@ -38,12 +39,12 @@
 </ul>
 
 <h2>AI processing</h2>
-<p>To find tasks and plan your week, Lumina sends relevant parts of your messages and calendar to an AI model provider for processing. We only use providers whose terms prohibit training their models on that data, and the results are used only to provide Lumina's features to you.</p>
+<p>To find tasks and plan your week, Lumina has an AI model read relevant parts of your messages and calendar. That model runs either on the computer running Lumina, so the data never leaves it, or at an AI provider whose terms prohibit training their models on that data. The results are used only to provide Lumina's features to you.</p>
 
 <h2>Storage and security</h2>
 <ul>
 <li>Data is stored in a managed PostgreSQL database and transmitted over encrypted connections.</li>
-<li>Access tokens for connected services are encrypted at rest.</li>
+<li>Access tokens and app-specific passwords for connected services are encrypted at rest.</li>
 <li>Lumina only requests the access it needs, and asks for more only when a feature needs it.</li>
 </ul>
 
@@ -54,6 +55,7 @@
 <ul>
 <li>Data is kept while your account is active and deleted when you delete your account.</li>
 <li>You can disconnect Google at any time in Lumina's settings or at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Lumina then stops accessing your Google data.</li>
+<li>You can disconnect iCloud at any time in Lumina's settings, and revoke the app-specific password at <a href="https://account.apple.com/account/manage">account.apple.com</a>. Lumina then stops accessing your iCloud calendars.</li>
 <li>To delete your account and all associated data, email us at the address below. We will complete deletion within 30 days.</li>
 </ul>
 
